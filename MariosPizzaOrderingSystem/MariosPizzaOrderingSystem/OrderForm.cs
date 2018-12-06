@@ -14,7 +14,7 @@ namespace MariosPizzaOrderingSystem
 {
     public partial class OrderForm : Form
     {
-        public string employeeId;
+        string employeeId;
 
         // object lists for Pizza, Side and Drink
         List<Pizza> pizzas = new List<Pizza>();
