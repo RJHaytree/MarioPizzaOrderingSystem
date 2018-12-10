@@ -1,0 +1,23 @@
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.csprojAssemblyReference.cache
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.LoginForm.resources
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.OrderForm.resources
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.Properties.Resources.resources
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.csproj.GenerateResource.cache
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.csproj.CoreCompileInputs.cache
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\bin\Debug\MariosPizzaApp.exe.config
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\bin\Debug\MariosPizzaApp.exe
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\bin\Debug\MariosPizzaApp.pdb
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.csproj.CopyComplete
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.exe
+I:\Software Development\14 - Event Driven Programming\Unit 14 - Event-Driven Programming [Ryan James Haytree (10214852)]\Assignment\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.pdb
+U:\My Desktop\Application\MariosPizzaApp\bin\Debug\MariosPizzaApp.exe.config
+U:\My Desktop\Application\MariosPizzaApp\bin\Debug\MariosPizzaApp.exe
+U:\My Desktop\Application\MariosPizzaApp\bin\Debug\MariosPizzaApp.pdb
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.csprojResolveAssemblyReference.cache
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.LoginForm.resources
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.OrderForm.resources
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.Properties.Resources.resources
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.csproj.GenerateResource.Cache
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.csproj.CoreCompileInputs.cache
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.exe
+U:\My Desktop\Application\MariosPizzaApp\obj\Debug\MariosPizzaApp.pdb
