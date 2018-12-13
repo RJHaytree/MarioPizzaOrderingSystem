@@ -33,6 +33,15 @@
             this.lsbPizzaItems = new System.Windows.Forms.ListBox();
             this.tcMainForm = new System.Windows.Forms.TabControl();
             this.tpPizzas = new System.Windows.Forms.TabPage();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label47 = new System.Windows.Forms.Label();
+            this.label48 = new System.Windows.Forms.Label();
+            this.label49 = new System.Windows.Forms.Label();
+            this.label46 = new System.Windows.Forms.Label();
+            this.label45 = new System.Windows.Forms.Label();
+            this.label44 = new System.Windows.Forms.Label();
+            this.label43 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
             this.btnDeletePizza = new System.Windows.Forms.Button();
             this.btnToSides = new System.Windows.Forms.Button();
             this.clbToppings = new System.Windows.Forms.CheckedListBox();
@@ -41,9 +50,15 @@
             this.cbSizes = new System.Windows.Forms.ComboBox();
             this.btnAddUpdatePizza = new System.Windows.Forms.Button();
             this.tpSides = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label51 = new System.Windows.Forms.Label();
+            this.label52 = new System.Windows.Forms.Label();
+            this.label50 = new System.Windows.Forms.Label();
+            this.label55 = new System.Windows.Forms.Label();
+            this.label56 = new System.Windows.Forms.Label();
+            this.label57 = new System.Windows.Forms.Label();
             this.label40 = new System.Windows.Forms.Label();
             this.nudSidesFFLarge = new System.Windows.Forms.NumericUpDown();
-            this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.btnBackToPizza = new System.Windows.Forms.Button();
@@ -60,6 +75,13 @@
             this.label7 = new System.Windows.Forms.Label();
             this.nudSidesGB = new System.Windows.Forms.NumericUpDown();
             this.tbDrinks = new System.Windows.Forms.TabPage();
+            this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label53 = new System.Windows.Forms.Label();
+            this.label54 = new System.Windows.Forms.Label();
+            this.label58 = new System.Windows.Forms.Label();
+            this.label59 = new System.Windows.Forms.Label();
+            this.label60 = new System.Windows.Forms.Label();
+            this.label61 = new System.Windows.Forms.Label();
             this.btnAddDrinks = new System.Windows.Forms.Button();
             this.label22 = new System.Windows.Forms.Label();
             this.nudDrinksTango = new System.Windows.Forms.NumericUpDown();
@@ -95,6 +117,8 @@
             this.clbOrderDeals = new System.Windows.Forms.CheckedListBox();
             this.btnBackToDrinks = new System.Windows.Forms.Button();
             this.tpReceipt = new System.Windows.Forms.TabPage();
+            this.lsbReceiptDeals = new System.Windows.Forms.ListBox();
+            this.label42 = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnNextOrder = new System.Windows.Forms.Button();
             this.label41 = new System.Windows.Forms.Label();
@@ -122,7 +146,9 @@
             this.label39 = new System.Windows.Forms.Label();
             this.tcMainForm.SuspendLayout();
             this.tpPizzas.SuspendLayout();
+            this.groupBox1.SuspendLayout();
             this.tpSides.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesFFLarge)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesFFReg)).BeginInit();
@@ -130,6 +156,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesGBC)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesGB)).BeginInit();
             this.tbDrinks.SuspendLayout();
+            this.groupBox3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDrinksTango)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDrinksFanta)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDrinks7Up)).BeginInit();
@@ -167,9 +194,9 @@
             this.lsbPizzaItems.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsbPizzaItems.FormattingEnabled = true;
             this.lsbPizzaItems.ItemHeight = 16;
-            this.lsbPizzaItems.Location = new System.Drawing.Point(563, 125);
+            this.lsbPizzaItems.Location = new System.Drawing.Point(563, 93);
             this.lsbPizzaItems.Name = "lsbPizzaItems";
-            this.lsbPizzaItems.Size = new System.Drawing.Size(277, 180);
+            this.lsbPizzaItems.Size = new System.Drawing.Size(277, 212);
             this.lsbPizzaItems.TabIndex = 2;
             this.lsbPizzaItems.SelectedIndexChanged += new System.EventHandler(this.lsbPizzaItems_SelectedIndexChanged);
             // 
@@ -181,15 +208,16 @@
             this.tcMainForm.Controls.Add(this.tpOverview);
             this.tcMainForm.Controls.Add(this.tpReceipt);
             this.tcMainForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.tcMainForm.Location = new System.Drawing.Point(13, 99);
+            this.tcMainForm.Location = new System.Drawing.Point(13, 70);
             this.tcMainForm.Name = "tcMainForm";
             this.tcMainForm.SelectedIndex = 0;
-            this.tcMainForm.Size = new System.Drawing.Size(548, 424);
+            this.tcMainForm.Size = new System.Drawing.Size(548, 453);
             this.tcMainForm.TabIndex = 3;
             this.tcMainForm.SelectedIndexChanged += new System.EventHandler(this.tcMainForm_SelectedIndexChanged);
             // 
             // tpPizzas
             // 
+            this.tpPizzas.Controls.Add(this.groupBox1);
             this.tpPizzas.Controls.Add(this.btnDeletePizza);
             this.tpPizzas.Controls.Add(this.btnToSides);
             this.tpPizzas.Controls.Add(this.clbToppings);
@@ -200,17 +228,115 @@
             this.tpPizzas.Location = new System.Drawing.Point(4, 25);
             this.tpPizzas.Name = "tpPizzas";
             this.tpPizzas.Padding = new System.Windows.Forms.Padding(3);
-            this.tpPizzas.Size = new System.Drawing.Size(540, 395);
+            this.tpPizzas.Size = new System.Drawing.Size(540, 424);
             this.tpPizzas.TabIndex = 0;
             this.tpPizzas.Text = "Pizzas";
             this.tpPizzas.UseVisualStyleBackColor = true;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.label47);
+            this.groupBox1.Controls.Add(this.label48);
+            this.groupBox1.Controls.Add(this.label49);
+            this.groupBox1.Controls.Add(this.label46);
+            this.groupBox1.Controls.Add(this.label45);
+            this.groupBox1.Controls.Add(this.label44);
+            this.groupBox1.Controls.Add(this.label43);
+            this.groupBox1.Controls.Add(this.label14);
+            this.groupBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox1.Location = new System.Drawing.Point(30, 224);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(359, 194);
+            this.groupBox1.TabIndex = 13;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "HELP";
+            // 
+            // label47
+            // 
+            this.label47.AutoSize = true;
+            this.label47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label47.Location = new System.Drawing.Point(21, 169);
+            this.label47.Name = "label47";
+            this.label47.Size = new System.Drawing.Size(199, 16);
+            this.label47.TabIndex = 28;
+            this.label47.Text = "3. Click the \'Update Pizza\' button";
+            // 
+            // label48
+            // 
+            this.label48.AutoSize = true;
+            this.label48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label48.Location = new System.Drawing.Point(21, 153);
+            this.label48.Name = "label48";
+            this.label48.Size = new System.Drawing.Size(261, 16);
+            this.label48.TabIndex = 27;
+            this.label48.Text = "2. Make any desired changes using above";
+            // 
+            // label49
+            // 
+            this.label49.AutoSize = true;
+            this.label49.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label49.Location = new System.Drawing.Point(21, 137);
+            this.label49.Name = "label49";
+            this.label49.Size = new System.Drawing.Size(250, 16);
+            this.label49.TabIndex = 26;
+            this.label49.Text = "1. Select the pizza from the list on the right";
+            // 
+            // label46
+            // 
+            this.label46.AutoSize = true;
+            this.label46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label46.Location = new System.Drawing.Point(21, 115);
+            this.label46.Name = "label46";
+            this.label46.Size = new System.Drawing.Size(174, 16);
+            this.label46.TabIndex = 25;
+            this.label46.Text = "HOW TO UPDATE A PIZZA";
+            // 
+            // label45
+            // 
+            this.label45.AutoSize = true;
+            this.label45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label45.Location = new System.Drawing.Point(21, 81);
+            this.label45.Name = "label45";
+            this.label45.Size = new System.Drawing.Size(179, 16);
+            this.label45.TabIndex = 24;
+            this.label45.Text = "3. Click the \'Add Pizza\' button";
+            // 
+            // label44
+            // 
+            this.label44.AutoSize = true;
+            this.label44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label44.Location = new System.Drawing.Point(21, 65);
+            this.label44.Name = "label44";
+            this.label44.Size = new System.Drawing.Size(243, 16);
+            this.label44.TabIndex = 23;
+            this.label44.Text = "2. Select toppings from the check boxes";
+            // 
+            // label43
+            // 
+            this.label43.AutoSize = true;
+            this.label43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label43.Location = new System.Drawing.Point(21, 49);
+            this.label43.Name = "label43";
+            this.label43.Size = new System.Drawing.Size(293, 16);
+            this.label43.TabIndex = 22;
+            this.label43.Text = "1. Select the pizza\'s size from the drop-down box";
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label14.Location = new System.Drawing.Point(21, 24);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(147, 16);
+            this.label14.TabIndex = 21;
+            this.label14.Text = "HOW TO ADD A PIZZA";
             // 
             // btnDeletePizza
             // 
             this.btnDeletePizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnDeletePizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDeletePizza.ForeColor = System.Drawing.Color.White;
-            this.btnDeletePizza.Location = new System.Drawing.Point(428, 269);
+            this.btnDeletePizza.Location = new System.Drawing.Point(431, 301);
             this.btnDeletePizza.Name = "btnDeletePizza";
             this.btnDeletePizza.Size = new System.Drawing.Size(106, 36);
             this.btnDeletePizza.TabIndex = 12;
@@ -223,7 +349,7 @@
             this.btnToSides.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnToSides.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToSides.ForeColor = System.Drawing.Color.White;
-            this.btnToSides.Location = new System.Drawing.Point(428, 353);
+            this.btnToSides.Location = new System.Drawing.Point(431, 385);
             this.btnToSides.Name = "btnToSides";
             this.btnToSides.Size = new System.Drawing.Size(106, 36);
             this.btnToSides.TabIndex = 11;
@@ -234,7 +360,7 @@
             // clbToppings
             // 
             this.clbToppings.FormattingEnabled = true;
-            this.clbToppings.Location = new System.Drawing.Point(125, 105);
+            this.clbToppings.Location = new System.Drawing.Point(125, 87);
             this.clbToppings.MultiColumn = true;
             this.clbToppings.Name = "clbToppings";
             this.clbToppings.Size = new System.Drawing.Size(264, 123);
@@ -245,7 +371,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Blue;
-            this.label6.Location = new System.Drawing.Point(219, 86);
+            this.label6.Location = new System.Drawing.Point(219, 68);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(77, 16);
             this.label6.TabIndex = 9;
@@ -256,7 +382,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.Blue;
-            this.label5.Location = new System.Drawing.Point(241, 29);
+            this.label5.Location = new System.Drawing.Point(241, 11);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(37, 16);
             this.label5.TabIndex = 8;
@@ -265,7 +391,7 @@
             // cbSizes
             // 
             this.cbSizes.FormattingEnabled = true;
-            this.cbSizes.Location = new System.Drawing.Point(135, 48);
+            this.cbSizes.Location = new System.Drawing.Point(135, 30);
             this.cbSizes.Name = "cbSizes";
             this.cbSizes.Size = new System.Drawing.Size(244, 24);
             this.cbSizes.TabIndex = 1;
@@ -275,7 +401,7 @@
             this.btnAddUpdatePizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAddUpdatePizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddUpdatePizza.ForeColor = System.Drawing.Color.White;
-            this.btnAddUpdatePizza.Location = new System.Drawing.Point(428, 311);
+            this.btnAddUpdatePizza.Location = new System.Drawing.Point(431, 343);
             this.btnAddUpdatePizza.Name = "btnAddUpdatePizza";
             this.btnAddUpdatePizza.Size = new System.Drawing.Size(106, 36);
             this.btnAddUpdatePizza.TabIndex = 0;
@@ -285,9 +411,9 @@
             // 
             // tpSides
             // 
+            this.tpSides.Controls.Add(this.groupBox2);
             this.tpSides.Controls.Add(this.label40);
             this.tpSides.Controls.Add(this.nudSidesFFLarge);
-            this.tpSides.Controls.Add(this.label14);
             this.tpSides.Controls.Add(this.label13);
             this.tpSides.Controls.Add(this.label12);
             this.tpSides.Controls.Add(this.btnBackToPizza);
@@ -306,15 +432,91 @@
             this.tpSides.Location = new System.Drawing.Point(4, 25);
             this.tpSides.Name = "tpSides";
             this.tpSides.Padding = new System.Windows.Forms.Padding(3);
-            this.tpSides.Size = new System.Drawing.Size(540, 395);
+            this.tpSides.Size = new System.Drawing.Size(540, 424);
             this.tpSides.TabIndex = 1;
             this.tpSides.Text = "Sides";
             this.tpSides.UseVisualStyleBackColor = true;
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label51);
+            this.groupBox2.Controls.Add(this.label52);
+            this.groupBox2.Controls.Add(this.label50);
+            this.groupBox2.Controls.Add(this.label55);
+            this.groupBox2.Controls.Add(this.label56);
+            this.groupBox2.Controls.Add(this.label57);
+            this.groupBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox2.Location = new System.Drawing.Point(118, 230);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(307, 175);
+            this.groupBox2.TabIndex = 19;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "HELP";
+            // 
+            // label51
+            // 
+            this.label51.AutoSize = true;
+            this.label51.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label51.Location = new System.Drawing.Point(22, 141);
+            this.label51.Name = "label51";
+            this.label51.Size = new System.Drawing.Size(207, 16);
+            this.label51.TabIndex = 26;
+            this.label51.Text = "2.Click the \'Update Side(s)\' button";
+            // 
+            // label52
+            // 
+            this.label52.AutoSize = true;
+            this.label52.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label52.Location = new System.Drawing.Point(21, 125);
+            this.label52.Name = "label52";
+            this.label52.Size = new System.Drawing.Size(251, 16);
+            this.label52.TabIndex = 25;
+            this.label52.Text = "1. Change the quantity of the desired side";
+            // 
+            // label50
+            // 
+            this.label50.AutoSize = true;
+            this.label50.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label50.Location = new System.Drawing.Point(21, 100);
+            this.label50.Name = "label50";
+            this.label50.Size = new System.Drawing.Size(165, 16);
+            this.label50.TabIndex = 24;
+            this.label50.Text = "HOW TO UPDATE SIDES";
+            // 
+            // label55
+            // 
+            this.label55.AutoSize = true;
+            this.label55.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label55.Location = new System.Drawing.Point(21, 65);
+            this.label55.Name = "label55";
+            this.label55.Size = new System.Drawing.Size(187, 16);
+            this.label55.TabIndex = 23;
+            this.label55.Text = "2.Click the \'Add Side(s)\' button";
+            // 
+            // label56
+            // 
+            this.label56.AutoSize = true;
+            this.label56.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label56.Location = new System.Drawing.Point(20, 49);
+            this.label56.Name = "label56";
+            this.label56.Size = new System.Drawing.Size(251, 16);
+            this.label56.TabIndex = 22;
+            this.label56.Text = "1. Change the quantity of the desired side";
+            // 
+            // label57
+            // 
+            this.label57.AutoSize = true;
+            this.label57.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label57.Location = new System.Drawing.Point(21, 24);
+            this.label57.Name = "label57";
+            this.label57.Size = new System.Drawing.Size(138, 16);
+            this.label57.TabIndex = 21;
+            this.label57.Text = "HOW TO ADD SIDES";
+            // 
             // label40
             // 
             this.label40.AutoSize = true;
-            this.label40.Location = new System.Drawing.Point(68, 201);
+            this.label40.Location = new System.Drawing.Point(118, 175);
             this.label40.Name = "label40";
             this.label40.Size = new System.Drawing.Size(127, 16);
             this.label40.TabIndex = 18;
@@ -322,28 +524,17 @@
             // 
             // nudSidesFFLarge
             // 
-            this.nudSidesFFLarge.Location = new System.Drawing.Point(211, 199);
+            this.nudSidesFFLarge.Location = new System.Drawing.Point(261, 173);
             this.nudSidesFFLarge.Name = "nudSidesFFLarge";
             this.nudSidesFFLarge.Size = new System.Drawing.Size(138, 22);
             this.nudSidesFFLarge.TabIndex = 17;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Blue;
-            this.label14.Location = new System.Drawing.Point(395, 42);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(37, 16);
-            this.label14.TabIndex = 16;
-            this.label14.Text = "SIZE";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Blue;
-            this.label13.Location = new System.Drawing.Point(230, 42);
+            this.label13.Location = new System.Drawing.Point(280, 16);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(77, 16);
             this.label13.TabIndex = 15;
@@ -354,7 +545,7 @@
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.ForeColor = System.Drawing.Color.Blue;
-            this.label12.Location = new System.Drawing.Point(132, 42);
+            this.label12.Location = new System.Drawing.Point(182, 16);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(48, 16);
             this.label12.TabIndex = 14;
@@ -365,7 +556,7 @@
             this.btnBackToPizza.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnBackToPizza.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToPizza.ForeColor = System.Drawing.Color.White;
-            this.btnBackToPizza.Location = new System.Drawing.Point(6, 353);
+            this.btnBackToPizza.Location = new System.Drawing.Point(3, 385);
             this.btnBackToPizza.Name = "btnBackToPizza";
             this.btnBackToPizza.Size = new System.Drawing.Size(106, 36);
             this.btnBackToPizza.TabIndex = 13;
@@ -378,7 +569,7 @@
             this.btnToDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnToDrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToDrinks.ForeColor = System.Drawing.Color.White;
-            this.btnToDrinks.Location = new System.Drawing.Point(428, 353);
+            this.btnToDrinks.Location = new System.Drawing.Point(431, 385);
             this.btnToDrinks.Name = "btnToDrinks";
             this.btnToDrinks.Size = new System.Drawing.Size(106, 36);
             this.btnToDrinks.TabIndex = 12;
@@ -391,7 +582,7 @@
             this.btnAddSides.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAddSides.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddSides.ForeColor = System.Drawing.Color.White;
-            this.btnAddSides.Location = new System.Drawing.Point(428, 311);
+            this.btnAddSides.Location = new System.Drawing.Point(431, 343);
             this.btnAddSides.Name = "btnAddSides";
             this.btnAddSides.Size = new System.Drawing.Size(106, 36);
             this.btnAddSides.TabIndex = 11;
@@ -402,7 +593,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(132, 229);
+            this.label11.Location = new System.Drawing.Point(182, 203);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(63, 16);
             this.label11.TabIndex = 10;
@@ -411,7 +602,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(55, 173);
+            this.label10.Location = new System.Drawing.Point(105, 147);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(140, 16);
             this.label10.TabIndex = 9;
@@ -420,7 +611,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(61, 145);
+            this.label9.Location = new System.Drawing.Point(111, 119);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(134, 16);
             this.label9.TabIndex = 8;
@@ -428,14 +619,14 @@
             // 
             // nudSidesC
             // 
-            this.nudSidesC.Location = new System.Drawing.Point(211, 227);
+            this.nudSidesC.Location = new System.Drawing.Point(261, 201);
             this.nudSidesC.Name = "nudSidesC";
             this.nudSidesC.Size = new System.Drawing.Size(138, 22);
             this.nudSidesC.TabIndex = 7;
             // 
             // nudSidesFFReg
             // 
-            this.nudSidesFFReg.Location = new System.Drawing.Point(211, 171);
+            this.nudSidesFFReg.Location = new System.Drawing.Point(261, 145);
             this.nudSidesFFReg.Name = "nudSidesFFReg";
             this.nudSidesFFReg.Size = new System.Drawing.Size(138, 22);
             this.nudSidesFFReg.TabIndex = 5;
@@ -447,14 +638,14 @@
             0,
             0,
             0});
-            this.nudSidesSCW.Location = new System.Drawing.Point(211, 143);
+            this.nudSidesSCW.Location = new System.Drawing.Point(261, 117);
             this.nudSidesSCW.Name = "nudSidesSCW";
             this.nudSidesSCW.Size = new System.Drawing.Size(138, 22);
             this.nudSidesSCW.TabIndex = 4;
             // 
             // nudSidesGBC
             // 
-            this.nudSidesGBC.Location = new System.Drawing.Point(211, 115);
+            this.nudSidesGBC.Location = new System.Drawing.Point(261, 89);
             this.nudSidesGBC.Name = "nudSidesGBC";
             this.nudSidesGBC.Size = new System.Drawing.Size(138, 22);
             this.nudSidesGBC.TabIndex = 3;
@@ -462,7 +653,7 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(37, 117);
+            this.label8.Location = new System.Drawing.Point(87, 91);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(158, 16);
             this.label8.TabIndex = 2;
@@ -471,7 +662,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(112, 89);
+            this.label7.Location = new System.Drawing.Point(162, 63);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(83, 16);
             this.label7.TabIndex = 1;
@@ -479,13 +670,14 @@
             // 
             // nudSidesGB
             // 
-            this.nudSidesGB.Location = new System.Drawing.Point(211, 87);
+            this.nudSidesGB.Location = new System.Drawing.Point(261, 61);
             this.nudSidesGB.Name = "nudSidesGB";
             this.nudSidesGB.Size = new System.Drawing.Size(138, 22);
             this.nudSidesGB.TabIndex = 0;
             // 
             // tbDrinks
             // 
+            this.tbDrinks.Controls.Add(this.groupBox3);
             this.tbDrinks.Controls.Add(this.btnAddDrinks);
             this.tbDrinks.Controls.Add(this.label22);
             this.tbDrinks.Controls.Add(this.nudDrinksTango);
@@ -505,17 +697,93 @@
             this.tbDrinks.Controls.Add(this.btnToOverview);
             this.tbDrinks.Location = new System.Drawing.Point(4, 25);
             this.tbDrinks.Name = "tbDrinks";
-            this.tbDrinks.Size = new System.Drawing.Size(540, 395);
+            this.tbDrinks.Size = new System.Drawing.Size(540, 424);
             this.tbDrinks.TabIndex = 2;
             this.tbDrinks.Text = "Drinks";
             this.tbDrinks.UseVisualStyleBackColor = true;
+            // 
+            // groupBox3
+            // 
+            this.groupBox3.Controls.Add(this.label53);
+            this.groupBox3.Controls.Add(this.label54);
+            this.groupBox3.Controls.Add(this.label58);
+            this.groupBox3.Controls.Add(this.label59);
+            this.groupBox3.Controls.Add(this.label60);
+            this.groupBox3.Controls.Add(this.label61);
+            this.groupBox3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.groupBox3.Location = new System.Drawing.Point(115, 236);
+            this.groupBox3.Name = "groupBox3";
+            this.groupBox3.Size = new System.Drawing.Size(307, 175);
+            this.groupBox3.TabIndex = 31;
+            this.groupBox3.TabStop = false;
+            this.groupBox3.Text = "HELP";
+            // 
+            // label53
+            // 
+            this.label53.AutoSize = true;
+            this.label53.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label53.Location = new System.Drawing.Point(22, 141);
+            this.label53.Name = "label53";
+            this.label53.Size = new System.Drawing.Size(210, 16);
+            this.label53.TabIndex = 26;
+            this.label53.Text = "2.Click the \'Update Drink(s)\' button";
+            // 
+            // label54
+            // 
+            this.label54.AutoSize = true;
+            this.label54.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label54.Location = new System.Drawing.Point(21, 125);
+            this.label54.Name = "label54";
+            this.label54.Size = new System.Drawing.Size(251, 16);
+            this.label54.TabIndex = 25;
+            this.label54.Text = "1. Change the quantity of the desired side";
+            // 
+            // label58
+            // 
+            this.label58.AutoSize = true;
+            this.label58.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label58.Location = new System.Drawing.Point(21, 100);
+            this.label58.Name = "label58";
+            this.label58.Size = new System.Drawing.Size(165, 16);
+            this.label58.TabIndex = 24;
+            this.label58.Text = "HOW TO UPDATE SIDES";
+            // 
+            // label59
+            // 
+            this.label59.AutoSize = true;
+            this.label59.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label59.Location = new System.Drawing.Point(21, 65);
+            this.label59.Name = "label59";
+            this.label59.Size = new System.Drawing.Size(190, 16);
+            this.label59.TabIndex = 23;
+            this.label59.Text = "2.Click the \'Add Drink(s)\' button";
+            // 
+            // label60
+            // 
+            this.label60.AutoSize = true;
+            this.label60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label60.Location = new System.Drawing.Point(20, 49);
+            this.label60.Name = "label60";
+            this.label60.Size = new System.Drawing.Size(251, 16);
+            this.label60.TabIndex = 22;
+            this.label60.Text = "1. Change the quantity of the desired side";
+            // 
+            // label61
+            // 
+            this.label61.AutoSize = true;
+            this.label61.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.label61.Location = new System.Drawing.Point(21, 24);
+            this.label61.Name = "label61";
+            this.label61.Size = new System.Drawing.Size(148, 16);
+            this.label61.TabIndex = 21;
+            this.label61.Text = "HOW TO ADD DRINKS";
             // 
             // btnAddDrinks
             // 
             this.btnAddDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.btnAddDrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAddDrinks.ForeColor = System.Drawing.Color.White;
-            this.btnAddDrinks.Location = new System.Drawing.Point(428, 311);
+            this.btnAddDrinks.Location = new System.Drawing.Point(431, 343);
             this.btnAddDrinks.Name = "btnAddDrinks";
             this.btnAddDrinks.Size = new System.Drawing.Size(106, 36);
             this.btnAddDrinks.TabIndex = 30;
@@ -526,7 +794,7 @@
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(183, 243);
+            this.label22.Location = new System.Drawing.Point(172, 206);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(48, 16);
             this.label22.TabIndex = 29;
@@ -534,7 +802,7 @@
             // 
             // nudDrinksTango
             // 
-            this.nudDrinksTango.Location = new System.Drawing.Point(252, 243);
+            this.nudDrinksTango.Location = new System.Drawing.Point(241, 206);
             this.nudDrinksTango.Name = "nudDrinksTango";
             this.nudDrinksTango.Size = new System.Drawing.Size(138, 22);
             this.nudDrinksTango.TabIndex = 28;
@@ -544,7 +812,7 @@
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.ForeColor = System.Drawing.Color.Blue;
-            this.label15.Location = new System.Drawing.Point(277, 58);
+            this.label15.Location = new System.Drawing.Point(266, 21);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(77, 16);
             this.label15.TabIndex = 27;
@@ -555,7 +823,7 @@
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.ForeColor = System.Drawing.Color.Blue;
-            this.label16.Location = new System.Drawing.Point(173, 58);
+            this.label16.Location = new System.Drawing.Point(162, 21);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(58, 16);
             this.label16.TabIndex = 26;
@@ -564,7 +832,7 @@
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(189, 217);
+            this.label17.Location = new System.Drawing.Point(178, 180);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(42, 16);
             this.label17.TabIndex = 25;
@@ -573,7 +841,7 @@
             // label18
             // 
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(194, 189);
+            this.label18.Location = new System.Drawing.Point(183, 152);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(37, 16);
             this.label18.TabIndex = 24;
@@ -582,7 +850,7 @@
             // label19
             // 
             this.label19.AutoSize = true;
-            this.label19.Location = new System.Drawing.Point(169, 161);
+            this.label19.Location = new System.Drawing.Point(158, 124);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(67, 16);
             this.label19.TabIndex = 23;
@@ -590,28 +858,28 @@
             // 
             // nudDrinksFanta
             // 
-            this.nudDrinksFanta.Location = new System.Drawing.Point(252, 215);
+            this.nudDrinksFanta.Location = new System.Drawing.Point(241, 178);
             this.nudDrinksFanta.Name = "nudDrinksFanta";
             this.nudDrinksFanta.Size = new System.Drawing.Size(138, 22);
             this.nudDrinksFanta.TabIndex = 22;
             // 
             // nudDrinks7Up
             // 
-            this.nudDrinks7Up.Location = new System.Drawing.Point(252, 187);
+            this.nudDrinks7Up.Location = new System.Drawing.Point(241, 150);
             this.nudDrinks7Up.Name = "nudDrinks7Up";
             this.nudDrinks7Up.Size = new System.Drawing.Size(138, 22);
             this.nudDrinks7Up.TabIndex = 21;
             // 
             // nudDrinksDCoke
             // 
-            this.nudDrinksDCoke.Location = new System.Drawing.Point(252, 159);
+            this.nudDrinksDCoke.Location = new System.Drawing.Point(241, 122);
             this.nudDrinksDCoke.Name = "nudDrinksDCoke";
             this.nudDrinksDCoke.Size = new System.Drawing.Size(138, 22);
             this.nudDrinksDCoke.TabIndex = 20;
             // 
             // nudDrinksPepsi
             // 
-            this.nudDrinksPepsi.Location = new System.Drawing.Point(252, 131);
+            this.nudDrinksPepsi.Location = new System.Drawing.Point(241, 94);
             this.nudDrinksPepsi.Name = "nudDrinksPepsi";
             this.nudDrinksPepsi.Size = new System.Drawing.Size(138, 22);
             this.nudDrinksPepsi.TabIndex = 19;
@@ -619,7 +887,7 @@
             // label20
             // 
             this.label20.AutoSize = true;
-            this.label20.Location = new System.Drawing.Point(193, 133);
+            this.label20.Location = new System.Drawing.Point(182, 96);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(43, 16);
             this.label20.TabIndex = 18;
@@ -628,7 +896,7 @@
             // label21
             // 
             this.label21.AutoSize = true;
-            this.label21.Location = new System.Drawing.Point(196, 105);
+            this.label21.Location = new System.Drawing.Point(185, 68);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(40, 16);
             this.label21.TabIndex = 17;
@@ -636,7 +904,7 @@
             // 
             // nudDrinksCoke
             // 
-            this.nudDrinksCoke.Location = new System.Drawing.Point(252, 103);
+            this.nudDrinksCoke.Location = new System.Drawing.Point(241, 66);
             this.nudDrinksCoke.Name = "nudDrinksCoke";
             this.nudDrinksCoke.Size = new System.Drawing.Size(138, 22);
             this.nudDrinksCoke.TabIndex = 16;
@@ -646,7 +914,7 @@
             this.btnBackToSides.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnBackToSides.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToSides.ForeColor = System.Drawing.Color.White;
-            this.btnBackToSides.Location = new System.Drawing.Point(6, 353);
+            this.btnBackToSides.Location = new System.Drawing.Point(3, 385);
             this.btnBackToSides.Name = "btnBackToSides";
             this.btnBackToSides.Size = new System.Drawing.Size(106, 36);
             this.btnBackToSides.TabIndex = 15;
@@ -659,7 +927,7 @@
             this.btnToOverview.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnToOverview.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnToOverview.ForeColor = System.Drawing.Color.White;
-            this.btnToOverview.Location = new System.Drawing.Point(428, 353);
+            this.btnToOverview.Location = new System.Drawing.Point(431, 385);
             this.btnToOverview.Name = "btnToOverview";
             this.btnToOverview.Size = new System.Drawing.Size(106, 36);
             this.btnToOverview.TabIndex = 14;
@@ -687,7 +955,7 @@
             this.tpOverview.Controls.Add(this.btnBackToDrinks);
             this.tpOverview.Location = new System.Drawing.Point(4, 25);
             this.tpOverview.Name = "tpOverview";
-            this.tpOverview.Size = new System.Drawing.Size(540, 395);
+            this.tpOverview.Size = new System.Drawing.Size(540, 424);
             this.tpOverview.TabIndex = 3;
             this.tpOverview.Text = "Overview";
             this.tpOverview.UseVisualStyleBackColor = true;
@@ -697,7 +965,7 @@
             this.btnFinishOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnFinishOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinishOrder.ForeColor = System.Drawing.Color.White;
-            this.btnFinishOrder.Location = new System.Drawing.Point(420, 344);
+            this.btnFinishOrder.Location = new System.Drawing.Point(431, 385);
             this.btnFinishOrder.Name = "btnFinishOrder";
             this.btnFinishOrder.Size = new System.Drawing.Size(106, 36);
             this.btnFinishOrder.TabIndex = 31;
@@ -710,7 +978,7 @@
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label30.ForeColor = System.Drawing.Color.Blue;
-            this.label30.Location = new System.Drawing.Point(207, 136);
+            this.label30.Location = new System.Drawing.Point(230, 137);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(121, 20);
             this.label30.TabIndex = 30;
@@ -721,7 +989,7 @@
             this.label29.AutoSize = true;
             this.label29.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label29.ForeColor = System.Drawing.Color.Blue;
-            this.label29.Location = new System.Drawing.Point(195, 21);
+            this.label29.Location = new System.Drawing.Point(218, 22);
             this.label29.Name = "label29";
             this.label29.Size = new System.Drawing.Size(142, 20);
             this.label29.TabIndex = 29;
@@ -730,7 +998,7 @@
             // label28
             // 
             this.label28.AutoSize = true;
-            this.label28.Location = new System.Drawing.Point(38, 103);
+            this.label28.Location = new System.Drawing.Point(61, 104);
             this.label28.Name = "label28";
             this.label28.Size = new System.Drawing.Size(72, 16);
             this.label28.TabIndex = 28;
@@ -739,7 +1007,7 @@
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(6, 72);
+            this.label27.Location = new System.Drawing.Point(29, 73);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(100, 16);
             this.label27.TabIndex = 27;
@@ -748,7 +1016,7 @@
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(58, 47);
+            this.label26.Location = new System.Drawing.Point(81, 48);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(51, 16);
             this.label26.TabIndex = 26;
@@ -756,28 +1024,28 @@
             // 
             // txtOrderPostCode
             // 
-            this.txtOrderPostCode.Location = new System.Drawing.Point(116, 100);
+            this.txtOrderPostCode.Location = new System.Drawing.Point(139, 101);
             this.txtOrderPostCode.Name = "txtOrderPostCode";
             this.txtOrderPostCode.Size = new System.Drawing.Size(311, 22);
             this.txtOrderPostCode.TabIndex = 25;
             // 
             // txtOrderAddress
             // 
-            this.txtOrderAddress.Location = new System.Drawing.Point(116, 72);
+            this.txtOrderAddress.Location = new System.Drawing.Point(139, 73);
             this.txtOrderAddress.Name = "txtOrderAddress";
             this.txtOrderAddress.Size = new System.Drawing.Size(311, 22);
             this.txtOrderAddress.TabIndex = 24;
             // 
             // txtOrderName
             // 
-            this.txtOrderName.Location = new System.Drawing.Point(115, 44);
+            this.txtOrderName.Location = new System.Drawing.Point(138, 45);
             this.txtOrderName.Name = "txtOrderName";
             this.txtOrderName.Size = new System.Drawing.Size(312, 22);
             this.txtOrderName.TabIndex = 23;
             // 
             // txtOrderFinalPrice
             // 
-            this.txtOrderFinalPrice.Location = new System.Drawing.Point(117, 295);
+            this.txtOrderFinalPrice.Location = new System.Drawing.Point(140, 296);
             this.txtOrderFinalPrice.Name = "txtOrderFinalPrice";
             this.txtOrderFinalPrice.ReadOnly = true;
             this.txtOrderFinalPrice.Size = new System.Drawing.Size(310, 22);
@@ -785,7 +1053,7 @@
             // 
             // txtOrderBasePrice
             // 
-            this.txtOrderBasePrice.Location = new System.Drawing.Point(118, 159);
+            this.txtOrderBasePrice.Location = new System.Drawing.Point(141, 160);
             this.txtOrderBasePrice.Name = "txtOrderBasePrice";
             this.txtOrderBasePrice.ReadOnly = true;
             this.txtOrderBasePrice.Size = new System.Drawing.Size(309, 22);
@@ -794,7 +1062,7 @@
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(31, 298);
+            this.label25.Location = new System.Drawing.Point(54, 299);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(77, 16);
             this.label25.TabIndex = 20;
@@ -803,7 +1071,7 @@
             // label24
             // 
             this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(61, 196);
+            this.label24.Location = new System.Drawing.Point(84, 197);
             this.label24.Name = "label24";
             this.label24.Size = new System.Drawing.Size(50, 16);
             this.label24.TabIndex = 19;
@@ -812,7 +1080,7 @@
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(31, 159);
+            this.label23.Location = new System.Drawing.Point(54, 160);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(80, 16);
             this.label23.TabIndex = 18;
@@ -821,7 +1089,7 @@
             // clbOrderDeals
             // 
             this.clbOrderDeals.FormattingEnabled = true;
-            this.clbOrderDeals.Location = new System.Drawing.Point(117, 196);
+            this.clbOrderDeals.Location = new System.Drawing.Point(140, 197);
             this.clbOrderDeals.Name = "clbOrderDeals";
             this.clbOrderDeals.Size = new System.Drawing.Size(310, 89);
             this.clbOrderDeals.TabIndex = 17;
@@ -832,7 +1100,7 @@
             this.btnBackToDrinks.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnBackToDrinks.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBackToDrinks.ForeColor = System.Drawing.Color.White;
-            this.btnBackToDrinks.Location = new System.Drawing.Point(15, 344);
+            this.btnBackToDrinks.Location = new System.Drawing.Point(3, 385);
             this.btnBackToDrinks.Name = "btnBackToDrinks";
             this.btnBackToDrinks.Size = new System.Drawing.Size(106, 36);
             this.btnBackToDrinks.TabIndex = 16;
@@ -842,6 +1110,8 @@
             // 
             // tpReceipt
             // 
+            this.tpReceipt.Controls.Add(this.lsbReceiptDeals);
+            this.tpReceipt.Controls.Add(this.label42);
             this.tpReceipt.Controls.Add(this.btnClose);
             this.tpReceipt.Controls.Add(this.btnNextOrder);
             this.tpReceipt.Controls.Add(this.label41);
@@ -863,17 +1133,39 @@
             this.tpReceipt.Controls.Add(this.txtReceiptName);
             this.tpReceipt.Location = new System.Drawing.Point(4, 25);
             this.tpReceipt.Name = "tpReceipt";
-            this.tpReceipt.Size = new System.Drawing.Size(540, 395);
+            this.tpReceipt.Size = new System.Drawing.Size(540, 424);
             this.tpReceipt.TabIndex = 4;
             this.tpReceipt.Text = "Receipt";
             this.tpReceipt.UseVisualStyleBackColor = true;
+            // 
+            // lsbReceiptDeals
+            // 
+            this.lsbReceiptDeals.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lsbReceiptDeals.FormattingEnabled = true;
+            this.lsbReceiptDeals.ItemHeight = 16;
+            this.lsbReceiptDeals.Location = new System.Drawing.Point(17, 279);
+            this.lsbReceiptDeals.MultiColumn = true;
+            this.lsbReceiptDeals.Name = "lsbReceiptDeals";
+            this.lsbReceiptDeals.Size = new System.Drawing.Size(506, 36);
+            this.lsbReceiptDeals.TabIndex = 49;
+            // 
+            // label42
+            // 
+            this.label42.AutoSize = true;
+            this.label42.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label42.ForeColor = System.Drawing.Color.Blue;
+            this.label42.Location = new System.Drawing.Point(213, 260);
+            this.label42.Name = "label42";
+            this.label42.Size = new System.Drawing.Size(111, 16);
+            this.label42.TabIndex = 48;
+            this.label42.Text = "APPLIED DEALS";
             // 
             // btnClose
             // 
             this.btnClose.BackColor = System.Drawing.Color.Red;
             this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnClose.ForeColor = System.Drawing.Color.White;
-            this.btnClose.Location = new System.Drawing.Point(417, 353);
+            this.btnClose.Location = new System.Drawing.Point(417, 376);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(106, 36);
             this.btnClose.TabIndex = 47;
@@ -886,7 +1178,7 @@
             this.btnNextOrder.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.btnNextOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnNextOrder.ForeColor = System.Drawing.Color.White;
-            this.btnNextOrder.Location = new System.Drawing.Point(305, 353);
+            this.btnNextOrder.Location = new System.Drawing.Point(305, 376);
             this.btnNextOrder.Name = "btnNextOrder";
             this.btnNextOrder.Size = new System.Drawing.Size(106, 36);
             this.btnNextOrder.TabIndex = 46;
@@ -897,7 +1189,7 @@
             // label41
             // 
             this.label41.AutoSize = true;
-            this.label41.Location = new System.Drawing.Point(297, 314);
+            this.label41.Location = new System.Drawing.Point(302, 334);
             this.label41.Name = "label41";
             this.label41.Size = new System.Drawing.Size(89, 16);
             this.label41.TabIndex = 45;
@@ -905,7 +1197,7 @@
             // 
             // txtReceiptEmployeeId
             // 
-            this.txtReceiptEmployeeId.Location = new System.Drawing.Point(392, 311);
+            this.txtReceiptEmployeeId.Location = new System.Drawing.Point(392, 331);
             this.txtReceiptEmployeeId.Name = "txtReceiptEmployeeId";
             this.txtReceiptEmployeeId.ReadOnly = true;
             this.txtReceiptEmployeeId.Size = new System.Drawing.Size(131, 22);
@@ -914,7 +1206,7 @@
             // label38
             // 
             this.label38.AutoSize = true;
-            this.label38.Location = new System.Drawing.Point(36, 370);
+            this.label38.Location = new System.Drawing.Point(36, 393);
             this.label38.Name = "label38";
             this.label38.Size = new System.Drawing.Size(76, 16);
             this.label38.TabIndex = 43;
@@ -923,7 +1215,7 @@
             // label37
             // 
             this.label37.AutoSize = true;
-            this.label37.Location = new System.Drawing.Point(17, 342);
+            this.label37.Location = new System.Drawing.Point(17, 365);
             this.label37.Name = "label37";
             this.label37.Size = new System.Drawing.Size(95, 16);
             this.label37.TabIndex = 42;
@@ -932,7 +1224,7 @@
             // label36
             // 
             this.label36.AutoSize = true;
-            this.label36.Location = new System.Drawing.Point(33, 314);
+            this.label36.Location = new System.Drawing.Point(33, 337);
             this.label36.Name = "label36";
             this.label36.Size = new System.Drawing.Size(79, 16);
             this.label36.TabIndex = 41;
@@ -951,7 +1243,7 @@
             // 
             // txtReceiptFinalPrice
             // 
-            this.txtReceiptFinalPrice.Location = new System.Drawing.Point(115, 367);
+            this.txtReceiptFinalPrice.Location = new System.Drawing.Point(115, 390);
             this.txtReceiptFinalPrice.Name = "txtReceiptFinalPrice";
             this.txtReceiptFinalPrice.ReadOnly = true;
             this.txtReceiptFinalPrice.Size = new System.Drawing.Size(171, 22);
@@ -959,7 +1251,7 @@
             // 
             // txtReceiptDelivery
             // 
-            this.txtReceiptDelivery.Location = new System.Drawing.Point(115, 339);
+            this.txtReceiptDelivery.Location = new System.Drawing.Point(115, 362);
             this.txtReceiptDelivery.Name = "txtReceiptDelivery";
             this.txtReceiptDelivery.ReadOnly = true;
             this.txtReceiptDelivery.Size = new System.Drawing.Size(171, 22);
@@ -967,7 +1259,7 @@
             // 
             // txtReceiptOrderPrice
             // 
-            this.txtReceiptOrderPrice.Location = new System.Drawing.Point(115, 311);
+            this.txtReceiptOrderPrice.Location = new System.Drawing.Point(115, 334);
             this.txtReceiptOrderPrice.Name = "txtReceiptOrderPrice";
             this.txtReceiptOrderPrice.ReadOnly = true;
             this.txtReceiptOrderPrice.Size = new System.Drawing.Size(171, 22);
@@ -975,13 +1267,15 @@
             // 
             // lsbReceiptOrder
             // 
+            this.lsbReceiptOrder.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lsbReceiptOrder.ColumnWidth = 170;
             this.lsbReceiptOrder.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lsbReceiptOrder.FormattingEnabled = true;
             this.lsbReceiptOrder.ItemHeight = 16;
             this.lsbReceiptOrder.Location = new System.Drawing.Point(17, 141);
             this.lsbReceiptOrder.MultiColumn = true;
             this.lsbReceiptOrder.Name = "lsbReceiptOrder";
-            this.lsbReceiptOrder.Size = new System.Drawing.Size(506, 164);
+            this.lsbReceiptOrder.Size = new System.Drawing.Size(506, 114);
             this.lsbReceiptOrder.TabIndex = 37;
             // 
             // label31
@@ -1073,7 +1367,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Blue;
-            this.label3.Location = new System.Drawing.Point(676, 99);
+            this.label3.Location = new System.Drawing.Point(676, 70);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 16);
             this.label3.TabIndex = 6;
@@ -1084,7 +1378,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Red;
-            this.label4.Location = new System.Drawing.Point(606, 59);
+            this.label4.Location = new System.Drawing.Point(607, 45);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(195, 25);
             this.label4.TabIndex = 7;
@@ -1128,8 +1422,12 @@
             this.tcMainForm.ResumeLayout(false);
             this.tpPizzas.ResumeLayout(false);
             this.tpPizzas.PerformLayout();
+            this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             this.tpSides.ResumeLayout(false);
             this.tpSides.PerformLayout();
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesFFLarge)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesC)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesFFReg)).EndInit();
@@ -1138,6 +1436,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudSidesGB)).EndInit();
             this.tbDrinks.ResumeLayout(false);
             this.tbDrinks.PerformLayout();
+            this.groupBox3.ResumeLayout(false);
+            this.groupBox3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudDrinksTango)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDrinksFanta)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudDrinks7Up)).EndInit();
@@ -1189,7 +1489,6 @@
         private System.Windows.Forms.Button btnBackToSides;
         private System.Windows.Forms.Button btnToOverview;
         private System.Windows.Forms.Button btnBackToDrinks;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Button btnAddDrinks;
@@ -1247,5 +1546,30 @@
         private System.Windows.Forms.TextBox txtReceiptEmployeeId;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnNextOrder;
+        private System.Windows.Forms.ListBox lsbReceiptDeals;
+        private System.Windows.Forms.Label label42;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.Label label47;
+        private System.Windows.Forms.Label label48;
+        private System.Windows.Forms.Label label49;
+        private System.Windows.Forms.Label label46;
+        private System.Windows.Forms.Label label45;
+        private System.Windows.Forms.Label label44;
+        private System.Windows.Forms.Label label43;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.Label label55;
+        private System.Windows.Forms.Label label56;
+        private System.Windows.Forms.Label label57;
+        private System.Windows.Forms.Label label51;
+        private System.Windows.Forms.Label label52;
+        private System.Windows.Forms.Label label50;
+        private System.Windows.Forms.GroupBox groupBox3;
+        private System.Windows.Forms.Label label53;
+        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label label58;
+        private System.Windows.Forms.Label label59;
+        private System.Windows.Forms.Label label60;
+        private System.Windows.Forms.Label label61;
     }
 }

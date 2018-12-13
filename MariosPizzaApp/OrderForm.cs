@@ -14,6 +14,7 @@ namespace MariosPizzaApp
 {
     public partial class OrderForm : Form
     {
+        // employee id
         string employeeId;
 
         // object lists for Pizza, Side and Drink
@@ -63,6 +64,7 @@ namespace MariosPizzaApp
             // remove receipt page on load - filled on completion
             tcMainForm.TabPages.Remove(tpReceipt);
 
+            // set txtEmployeeID to employeeId to always show the staff member logged in
             txtEmployeeID.Text = employeeId; 
         }
 
@@ -90,7 +92,9 @@ namespace MariosPizzaApp
             for (int i = 0; i < pizzas.Count; i++)
             {
                 if (pizzas[i].size != null || !string.IsNullOrWhiteSpace(pizzas[i].size))
+                {
                     lsbPizzaItems.Items.Add(string.Format("Size: {0} | # of toppings: {1} | Price: {2}", pizzas[i].size, pizzas[i].totalToppings.ToString(), $"{pizzas[i].price:C2}"));
+                }
             }
         }
 
@@ -371,6 +375,8 @@ namespace MariosPizzaApp
 
                 AddSide(name, price, quantity);
             }
+
+            btnAddSides.Text = "Update Side(s)";
         }
 
         private void AddSide(string name, double price, int quantity)
@@ -469,6 +475,8 @@ namespace MariosPizzaApp
 
                 AddDrinks(name, quantity);
             }
+
+            btnAddDrinks.Text = "Update Drink(s)";
         }
 
         private void AddDrinks(string name, int quantity)
@@ -582,8 +590,11 @@ namespace MariosPizzaApp
             // if user clicks the receipt tab, repopulate fresh
             if (tcMainForm.SelectedIndex == 4)
             {
-                CreateReceipt();
-                PopulateReceipt();
+                if (!string.IsNullOrWhiteSpace(txtOrderName.Text) && !string.IsNullOrWhiteSpace(txtOrderAddress.Text) && !string.IsNullOrWhiteSpace(txtOrderPostCode.Text))
+                {
+                    CreateReceipt();
+                    PopulateReceipt();
+                }
             }
         }
 
@@ -689,26 +700,40 @@ namespace MariosPizzaApp
             receipt.OrderPizzas = new List<Pizza>();
             receipt.OrderSides = new List<Side>();
             receipt.OrderDrinks = new List<Drink>();
+            receipt.OrderDeals = new List<string>();
 
-            // add each Pizza, Side and Drink to the receipt 
+            // add each Pizza to receipt
             foreach (Pizza pizza in pizzas)
             {
                 receipt.OrderPizzas.Add(pizza);
             }
 
+            // add each Side to receipt
             foreach (Side side in sides)
             {
                 receipt.OrderSides.Add(side);
             }
 
+            // add each Drink to receipt
             foreach (Drink drink in drinks)
             {
                 receipt.OrderDrinks.Add(drink);
             }
 
+            // add deals to receipt
+            if (deal1Active == true)
+            {
+                receipt.OrderDeals.Add("1 Medium pizza, 4 toppings, 1 drink");
+            }
+
+            if (deal2Active == true)
+            {
+                receipt.OrderDeals.Add("2 Large pizzas, 4 toppings");
+            }
+
             // calc price, delivery cost and total 
             receipt.orderCost = CalcFinalPrice();
-            receipt.deliveryCost = receipt.orderCost / 5;
+            receipt.deliveryCost = (5 / receipt.orderCost) * 100;
             receipt.receiptTotal = receipt.orderCost + receipt.deliveryCost;
 
             // add receipt to receipt list
@@ -719,11 +744,15 @@ namespace MariosPizzaApp
         {
             // clear list box of final order
             lsbReceiptOrder.Items.Clear();
+            lsbReceiptDeals.Items.Clear();
 
             // always use index of 0 as there can only be 1 item in the receipts list
             txtReceiptName.Text = receipts[0].name;
             txtReceiptAddress.Text = receipts[0].addressLine1;
             txtReceiptPostCode.Text = receipts[0].postcode;
+
+            // heading for pizzas
+            lsbReceiptOrder.Items.Add("[ DRINKS ]===============");
 
             // display in lsbReceiptOrder list box in appropriate format
             foreach (Pizza pizza in receipts[0].OrderPizzas)
@@ -738,7 +767,7 @@ namespace MariosPizzaApp
 
             // divider for sides
             lsbReceiptOrder.Items.Add("");
-            lsbReceiptOrder.Items.Add("[ SIDES ]===============");
+            lsbReceiptOrder.Items.Add("[ SIDES ]================");
 
             // display in lsbReceiptOrder list box in appropriate format
             foreach (Side side in receipts[0].OrderSides)
@@ -756,6 +785,12 @@ namespace MariosPizzaApp
                 lsbReceiptOrder.Items.Add(string.Format("{0} ({1}) [{2}]", drink.name, drink.quantity, $"{drink.price:C2}"));
             }
 
+            // display in lsbReceiptDeals list box
+            foreach (string deal in receipts[0].OrderDeals)
+            {
+                lsbReceiptDeals.Items.Add(deal);
+            }
+
             // display prices in text boxes
             txtReceiptOrderPrice.Text = $"{receipts[0].orderCost:C2}";
             txtReceiptDelivery.Text = $"{receipts[0].deliveryCost:C2}";
@@ -767,11 +802,18 @@ namespace MariosPizzaApp
 
         private void btnFinishOrder_Click(object sender, EventArgs e)
         {
-            // move from overview -> receipt
-            tcMainForm.TabPages.Add(tpReceipt);
-            CreateReceipt();
-            PopulateReceipt();
-            NextTab();
+            if (!string.IsNullOrWhiteSpace(txtOrderName.Text) && !string.IsNullOrWhiteSpace(txtOrderAddress.Text) && !string.IsNullOrWhiteSpace(txtOrderPostCode.Text))
+            {
+                // move from overview -> receipt
+                tcMainForm.TabPages.Add(tpReceipt);
+                CreateReceipt();
+                PopulateReceipt();
+                NextTab();
+            }
+            else
+            {
+                MessageBox.Show("Customer name, address and postcode fields must be filled!");
+            }
         }
 
 
@@ -782,17 +824,27 @@ namespace MariosPizzaApp
          **/
         private void btnNextOrder_Click(object sender, EventArgs e)
         {
-            // close current form, create new OrderForm (ensuring to pass employeeId), then show new form.
-            this.Close();
+            DialogResult result = MessageBox.Show("Are you sure you would like to create a new order?", "Ordering System", MessageBoxButtons.YesNo);
 
-            OrderForm newForm = new OrderForm(employeeId);
-            newForm.Show();
+            if (result == DialogResult.Yes)
+            {
+                // close current form, create new OrderForm (ensuring to pass employeeId), then show new form.
+                this.Close();
+
+                OrderForm newOrder = new OrderForm(employeeId);
+                newOrder.Show();
+            }
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            // close environmet
-            Environment.Exit(0);
+            DialogResult result = MessageBox.Show("Are you sure you would like to close this application?", "Ordering System", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                // close environmet
+                Environment.Exit(0);
+            }
         }
 
 
@@ -938,6 +990,9 @@ namespace MariosPizzaApp
         public List<Pizza> OrderPizzas { get; set; }
         public List<Side> OrderSides { get; set; }
         public List<Drink> OrderDrinks { get; set; }
+        public List<string> OrderDeals { get; set; }
+
+        // order costs - total + delivery cost
         public double orderCost;
         public double deliveryCost;
         public double receiptTotal;
