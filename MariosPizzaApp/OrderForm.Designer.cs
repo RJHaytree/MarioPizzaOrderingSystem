@@ -175,7 +175,7 @@
             this.lsbDrinkItems.Location = new System.Drawing.Point(567, 435);
             this.lsbDrinkItems.MultiColumn = true;
             this.lsbDrinkItems.Name = "lsbDrinkItems";
-            this.lsbDrinkItems.Size = new System.Drawing.Size(277, 84);
+            this.lsbDrinkItems.Size = new System.Drawing.Size(273, 84);
             this.lsbDrinkItems.TabIndex = 0;
             // 
             // lsbSideItems

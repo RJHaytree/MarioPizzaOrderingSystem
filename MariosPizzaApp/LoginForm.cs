@@ -176,6 +176,7 @@ namespace MariosPizzaApp
 
             if (attempts <= 0)
             {
+                MessageBox.Show("No attempts remaining! Closing applicaion");
                 Environment.Exit(0);
             }
         }

@@ -323,7 +323,7 @@ namespace MariosPizzaApp
             if (nudSidesGB.Value > 0)
             {
                 string name = "Garlic bread";
-                double price = 1.70;
+                decimal price = 1.70m;
                 int quantity = Convert.ToInt32(nudSidesGB.Value);
 
                 // call the AddSIdes method which uses the name, price and quantity of the
@@ -334,7 +334,7 @@ namespace MariosPizzaApp
             if (nudSidesGBC.Value > 0)
             {
                 string name = "Garlic bread with cheese";
-                double price = 2.20;
+                decimal price = 2.20m;
                 int quantity = Convert.ToInt32(nudSidesGBC.Value);
 
                 AddSide(name, price, quantity);
@@ -343,7 +343,7 @@ namespace MariosPizzaApp
             if (nudSidesSCW.Value > 0)
             {
                 string name = "Spicy chicken wings";
-                double price = 3.50;
+                decimal price = 3.50m;
                 int quantity = Convert.ToInt32(nudSidesSCW.Value);
 
                 AddSide(name, price, quantity);
@@ -352,7 +352,7 @@ namespace MariosPizzaApp
             if (nudSidesFFReg.Value > 0)
             {
                 string name = "French fries [R]";
-                double price = 1.00;
+                decimal price = 1.00m;
                 int quantity = Convert.ToInt32(nudSidesFFReg.Value);
 
                 AddSide(name, price, quantity);
@@ -361,7 +361,7 @@ namespace MariosPizzaApp
             if (nudSidesFFLarge.Value > 0)
             {
                 string name = "French fries [L]";
-                double price = 1.30;
+                decimal price = 1.30m;
                 int quantity = Convert.ToInt32(nudSidesFFLarge.Value);
 
                 AddSide(name, price, quantity);
@@ -370,7 +370,7 @@ namespace MariosPizzaApp
             if (nudSidesC.Value > 0)
             {
                 string name = "Coleslaw";
-                double price = 0.70;
+                decimal price = 0.70m;
                 int quantity = Convert.ToInt32(nudSidesC.Value);
 
                 AddSide(name, price, quantity);
@@ -379,7 +379,7 @@ namespace MariosPizzaApp
             btnAddSides.Text = "Update Side(s)";
         }
 
-        private void AddSide(string name, double price, int quantity)
+        private void AddSide(string name, decimal price, int quantity)
         {
             /**
              * Called when creating new Side object, and uses passed variables
@@ -392,11 +392,11 @@ namespace MariosPizzaApp
 
             if (side.name == "Spicy chicken wings")
             {
-                side.price += (side.quantity / 10 * 6.00);
+                side.price += (decimal)(side.quantity / 10 * 6.00);
 
                 if (side.quantity % 10 == 5)
                 {
-                    side.price += 3.50;
+                    side.price += 3.50m;
                 }
             }
             else
@@ -489,7 +489,7 @@ namespace MariosPizzaApp
             Drink drink = new Drink();
             drink.name = name;
             drink.quantity = quantity;
-            drink.price = 0.70 * quantity;
+            drink.price = 0.70m * quantity;
 
             // add drink to drinks list
             drinks.Add(drink);
@@ -557,7 +557,7 @@ namespace MariosPizzaApp
             // Calculate base price of order when order overview tabpage is selected
             if (tcMainForm.SelectedIndex == 3)
             {
-                double orderBasePrice = 0;
+                decimal orderBasePrice = 0;
 
                 // cycle through all Pizza objects, getting price
                 foreach (Pizza pizza in pizzas)
@@ -638,7 +638,7 @@ namespace MariosPizzaApp
 
         private void clbOrderDeals_ItemCheck(object sender, ItemCheckEventArgs e)
         {
-            double orderTotal = 0;
+            decimal orderTotal = 0;
 
             // get selected deal
             string deal = clbOrderDeals.SelectedItem.ToString();
@@ -855,26 +855,26 @@ namespace MariosPizzaApp
          * 
          * These are called when calculating prices for the objects
          **/
-        private double CalcBasePizzaPrice(string size, int toppings)
+        private decimal CalcBasePizzaPrice(string size, int toppings)
         {
             /**
              * Using the size and number of toppings passed to the method,
              * calculate the base price depending on the size of the pizza
              * chosen, and number of toppings where each topping is 80p
              **/
-            double price = 0;
+            decimal price = 0;
 
             if (size == "Small")
             {
-                return price = 3.50 + (0.80 * toppings);
+                return price = (decimal)(3.50 + (0.80 * toppings));
             }
             else if (size == "Medium")
             {
-                return price = 5.00 + (0.80 * toppings);
+                return price = (decimal)(5.00 + (0.80 * toppings));
             }
             else if (size == "Large")
             {
-                return price = 7.50 + (0.80 * toppings);
+                return price = (decimal)(7.00 + (0.80 * toppings));
             }
             else
             {
@@ -883,13 +883,13 @@ namespace MariosPizzaApp
             }
         }
 
-        private double CalcFinalPrice()
+        private decimal CalcFinalPrice()
         {
             /**
              * Cycle through all objects in the order, adding price to orderTotal
              * which is then returned once the calculation is complete.
              **/
-            double orderTotal = 0;
+            decimal orderTotal = 0;
 
             foreach (Pizza pizza in pizzas)
             {
@@ -909,12 +909,12 @@ namespace MariosPizzaApp
             // deals merely minus the amount which is saved, rather than recalculating
             if (deal1Active == true)
             {
-                orderTotal -= 1.00;
+                orderTotal -= 1.00m;
             }
 
             if (deal2Active == true)
             {
-                orderTotal -= 4.41;
+                orderTotal -= 4.41m;
             }
 
             // return orderTotal
@@ -936,7 +936,7 @@ namespace MariosPizzaApp
         public string size;
         public List<string> Toppings { get; set; }
         public int totalToppings;
-        public double price;
+        public decimal price;
     }
 
     class Side
@@ -952,7 +952,7 @@ namespace MariosPizzaApp
 
         public string name;
         public int quantity;
-        public double price;
+        public decimal price;
     }
     
     class Drink
@@ -968,7 +968,7 @@ namespace MariosPizzaApp
 
         public string name;
         public int quantity;
-        public double price;
+        public decimal price;
     }
 
     class Receipt
@@ -993,8 +993,8 @@ namespace MariosPizzaApp
         public List<string> OrderDeals { get; set; }
 
         // order costs - total + delivery cost
-        public double orderCost;
-        public double deliveryCost;
-        public double receiptTotal;
+        public decimal orderCost;
+        public decimal deliveryCost;
+        public decimal receiptTotal;
     }
 }
